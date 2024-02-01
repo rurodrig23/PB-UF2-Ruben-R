@@ -1,6 +1,8 @@
 #Teniu el següent codi, hem de treballar la cohesió i acoplament.
 
-def agregar_libro(bibloteca):
+biblioteca = []
+
+def agregar_libro():
         titulo = input("Ingrese el título del libro: ")
         autor = input("Ingrese el autor del libro: ")
         genero = input("Ingrese el género del libro: ")
@@ -9,7 +11,7 @@ def agregar_libro(bibloteca):
         biblioteca.append(libro)
         print(f'Libro "{titulo}" agregado a la biblioteca.')
 
-def prestar_libro(bibloteca):
+def prestar_libro():
         titulo = input("Ingrese el título del libro a prestar: ")
         encontrado = False
         for libro in biblioteca:
@@ -21,7 +23,7 @@ def prestar_libro(bibloteca):
         if not encontrado:
             print(f'Libro "{titulo}" no disponible para préstamo.')
 
-def devolver_libro(bibloteca):
+def devolver_libro():
         titulo = input("Ingrese el título del libro a devolver: ")
         encontrado = False
         for libro in biblioteca:
@@ -35,8 +37,7 @@ def devolver_libro(bibloteca):
 
 
 def salir():
-     
-biblioteca = []
+     print("saliendo del programa")
 
 while True:
     print("\n1. Agregar libro")
@@ -46,14 +47,17 @@ while True:
 
     opcion = input("Seleccione una opción: ")
 
-if opcion == "1":
-     agregar_libro
+    if opcion == "1":
+        agregar_libro()
 
-elif opcion == "2":
-     prestar_libro
+    elif opcion == "2":
+        prestar_libro()
 
-elif opcion == "3":
-     devolver_libro
+    elif opcion == "3":
+        devolver_libro()
      
-elif opcion == "4":
-     salir
+    elif opcion == "4":
+        salir()
+        break
+    else:
+         print("Opcion, no valida")
