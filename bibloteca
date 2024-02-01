@@ -1,16 +1,6 @@
-Teniu el següent codi, hem de treballar la cohesió i acoplament.
+#Teniu el següent codi, hem de treballar la cohesió i acoplament.
 
-biblioteca = []
-
-while True:
-    print("\n1. Agregar libro")
-    print("2. Prestar libro")
-    print("3. Devolver libro")
-    print("4. Salir")
-
-    opcion = input("Seleccione una opción: ")
-
-    if opcion == "1":
+def agregar_libro(bibloteca):
         titulo = input("Ingrese el título del libro: ")
         autor = input("Ingrese el autor del libro: ")
         genero = input("Ingrese el género del libro: ")
@@ -19,7 +9,7 @@ while True:
         biblioteca.append(libro)
         print(f'Libro "{titulo}" agregado a la biblioteca.')
 
-    elif opcion == "2":
+def prestar_libro(bibloteca):
         titulo = input("Ingrese el título del libro a prestar: ")
         encontrado = False
         for libro in biblioteca:
@@ -31,7 +21,7 @@ while True:
         if not encontrado:
             print(f'Libro "{titulo}" no disponible para préstamo.')
 
-    elif opcion == "3":
+def devolver_libro(bibloteca):
         titulo = input("Ingrese el título del libro a devolver: ")
         encontrado = False
         for libro in biblioteca:
@@ -43,9 +33,27 @@ while True:
         if not encontrado:
             print(f'No se puede devolver el libro "{titulo}".')
 
-    elif opcion == "4":
-        print("Saliendo del programa.")
-        break
 
-    else:
-        print("Opción no válida. Por favor, seleccione una opción correcta.")
+def salir():
+     
+biblioteca = []
+
+while True:
+    print("\n1. Agregar libro")
+    print("2. Prestar libro")
+    print("3. Devolver libro")
+    print("4. Salir")
+
+    opcion = input("Seleccione una opción: ")
+
+if opcion == "1":
+     agregar_libro
+
+elif opcion == "2":
+     prestar_libro
+
+elif opcion == "3":
+     devolver_libro
+     
+elif opcion == "4":
+     salir
