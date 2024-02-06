@@ -1,32 +1,47 @@
 
-def calcul_mit(dades_enregistrades):
-    if not dades_enregistrades:
+def calcul_mit(temperaturas):
+    if not temperaturas:
         print("No hay temperaturas registradas.")
         return
     
     suma_temperaturas = 0
-    for temp in dades_enregistrades:
+    for temp in temperaturas:
         suma_temperaturas += temp
     
-    media = suma_temperaturas / len(dades_enregistrades)
+    media = suma_temperaturas / len(temperaturas)
     print(f"La temperatura media hasta la fecha es: {media:.2f} grados Celsius.")
 
-def val_temp(dades_enregistrades):
+def val_temp(temperaturas):
 
     try:
-        temperaturas_float = [float(temp) for temp in dades_enregistrades.split()]
+        temperaturas_float = [float(temp) for temp in temperaturas.split()]
         return temperaturas_float
     except ValueError:
         print("Error: Se deben ingresar valores numéricos.")
         return None
 
-#def temp_reg():
+temp_reg():
      
-#def cal_dif_max():
+def cal_dif_max(temperaturas):
 
+    if not temperaturas:
+        print("No hay temperaturas registradas.")
+        return
+    
+temperatura_minima = temperaturas[0]
+temperatura_maxima = temperaturas[0]
+for temp in temperaturas:
+        if temp < temperatura_minima:
+            temperatura_minima = temp
+        elif temp > temperatura_maxima:
+            temperatura_maxima = temp
+    
+diferencia_maxima = temperatura_maxima - temperatura_minima
+print(f"La diferencia máxima entre temperaturas hasta la fecha es: {diferencia_maxima:.2f} grados Celsius.")
 
 def menu():
     dades_enregistrades = []
+    temperaturas = []
 
 while True:
         print("\nBenvingut al registre de temperatures")
