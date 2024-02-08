@@ -1,5 +1,4 @@
 temperaturas_registradas = []
-temperaturas = []
 
 def calcul_mit(temperaturas):
     if not temperaturas:
