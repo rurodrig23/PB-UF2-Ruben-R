@@ -1,5 +1,5 @@
 temperaturas_registradas = []
-
+temperaturas = []
 def calcul_mit(temperaturas):
     if not temperaturas:
         print("No hay temperaturas registradas.")
@@ -29,7 +29,11 @@ def cal_dif_max(temperaturas):
         print("No hay temperaturas registradas.")
         return
     
-temperatura_minima = temperatura_maxima = temperaturas[0]
+    if len(temperaturas) < 2:
+        print("Debe haber al menos dos temperaturas registradas para calcular la diferencia máxima.")
+        return
+    
+temperatura_minima = temperatura_maxima = temperaturas_registradas[0]
 for temp in temperaturas:
         if temp < temperatura_minima:
             temperatura_minima = temp
