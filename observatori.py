@@ -19,6 +19,9 @@ def val_temp(temperaturas):
     except ValueError:
         print("Error: Se deben ingresar valores numéricos.")
         return None
+    except ValueError:
+        print("Error: Se deben ingresar valores numericos")
+        return None
 
 temp_reg():
      
