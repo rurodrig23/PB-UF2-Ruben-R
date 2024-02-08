@@ -22,17 +22,14 @@ def val_temp(temperaturas):
     except ValueError:
         print("Error: Se deben ingresar valores numericos")
         return None
-
-temp_reg():
-     
+    
 def cal_dif_max(temperaturas):
 
     if not temperaturas:
         print("No hay temperaturas registradas.")
         return
     
-temperatura_minima = temperaturas[0]
-temperatura_maxima = temperaturas[0]
+temperatura_minima = temperatura_maxima = temperaturas[0]
 for temp in temperaturas:
         if temp < temperatura_minima:
             temperatura_minima = temp
@@ -43,8 +40,7 @@ diferencia_maxima = temperatura_maxima - temperatura_minima
 print(f"La diferencia máxima entre temperaturas hasta la fecha es: {diferencia_maxima:.2f} grados Celsius.")
 
 def menu():
-    dades_enregistrades = []
-    temperaturas = []
+    temperaturas_registradas = []
 
 while True:
         print("\nBenvingut al registre de temperatures")
@@ -58,12 +54,12 @@ while True:
             temperaturas_semana = input("Escriu les temperatures d'aquesta setmana (separades per espais): ")
             temperaturas_validadas = val_temp(temperaturas_semana)
             if temperaturas_validadas:
-                temp_reg.extend(temperaturas_validadas)
+                temperaturas_registradas.extend(temperaturas_validadas)
                 print("Temperatures registrades amb èxit.")
         elif opcion == "MJ":
-            calcul_mit(temp_reg)
+            calcul_mit(temperaturas_registradas)
         elif opcion == "DF":
-            cal_dif_max(temp_reg)
+            cal_dif_max(temperaturas_registradas)
         elif opcion == "FI":
             print("Gràcies per utilitzar el registre de temperatures. ")
             break
