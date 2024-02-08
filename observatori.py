@@ -1,3 +1,5 @@
+temperaturas_registradas = []
+temperaturas = []
 
 def calcul_mit(temperaturas):
     if not temperaturas:
@@ -9,7 +11,7 @@ def calcul_mit(temperaturas):
         suma_temperaturas += temp
     
     media = suma_temperaturas / len(temperaturas)
-    print(f"La temperatura media hasta la fecha es: {media:.2f} grados Celsius.")
+    print(f"La temperatura media es: ")
 
 def val_temp(temperaturas):
 
@@ -24,7 +26,6 @@ def val_temp(temperaturas):
         return None
     
 def cal_dif_max(temperaturas):
-
     if not temperaturas:
         print("No hay temperaturas registradas.")
         return
@@ -40,9 +41,7 @@ diferencia_maxima = temperatura_maxima - temperatura_minima
 print(f"La diferencia máxima entre temperaturas hasta la fecha es: {diferencia_maxima:.2f} grados Celsius.")
 
 def menu():
-    temperaturas_registradas = []
-
-while True:
+    while True:
         print("\nBenvingut al registre de temperatures")
         print("[RT] Registrar temperatures setmanals.")
         print("[MJ] Consultar temperatura mitjana.")
