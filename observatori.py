@@ -8,7 +8,6 @@ def calcul_mit(temperaturas):
     suma_temperaturas = 0
     for temp in temperaturas:
         suma_temperaturas += temp
-    
     media = suma_temperaturas / len(temperaturas)
     print(f"La temperatura media es: ")
 
