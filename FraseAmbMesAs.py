@@ -22,5 +22,5 @@ def frase_amb_mes_as():
 
         print(f'La frase amb més \'a\' és: "{frase_mes_as}"')
         print(f'Té {max_as} \'a\'.')
-    
-
+        
+frase_amb_mes_as()
