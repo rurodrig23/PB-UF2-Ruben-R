@@ -9,3 +9,7 @@ def frase_amb_mes_as():
     max_as = 0
     frase_mes_as = ""
 
+while True:
+    frase = input("Escribe una frase:\n> ")
+    if frase.lower() == "fi":
+            break
