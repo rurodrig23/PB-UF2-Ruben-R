@@ -1,6 +1,11 @@
-def contar_palabras():
-     return frase.lower().count('a')
+def contar_letras_a(frase):
+    count = 0
+    for caracter in frase:
+        if caracter.lower() == 'a':
+            count += 1
+    return count
 
-def Frase_Amb_Mes_As():
+def frase_amb_mes_as():
+    max_as = 0
     frase_mes_as = ""
 
