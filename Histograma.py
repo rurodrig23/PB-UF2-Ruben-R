@@ -2,9 +2,12 @@
 def generar_histograma():
     tirades = [0] * 11
 
-    for i in range(1,7):
-        for j in range(1,7):
+    for i in range(1,6):
+        for j in range(1,6):
             suma_dados = i+j
-            suma_dados.append(tirades)
+            tirades.append(suma_dados)
 
         return tirades
+    
+def suma_valores(tirades):
+
