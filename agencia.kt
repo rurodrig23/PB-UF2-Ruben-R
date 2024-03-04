@@ -5,9 +5,17 @@ fun main() {
 }
 
 
-fun afegir viatge() {
+fun afegirViatge() {
     val viatge = Viatge(destinacio, durada, preu)
 
     llistaViatges.add(viatge)
 
 }
+
+fun registreClient()
+    val clientNou = Client(name, surname, id)
+
+    return id
+
+
+fun detallVol()
