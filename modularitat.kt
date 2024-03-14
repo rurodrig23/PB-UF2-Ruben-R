@@ -1,6 +1,6 @@
-class Coordenada() {
+class coordenada() {
 
-    constructor(this, x ,y):
+    constructor():
         this.x = x
         this.y = y
 
@@ -22,7 +22,7 @@ class Coordenada() {
 }
 
 // Coordenada inicial
-var coordenada = Coordenada(0, 0)
+var coordenada = coordenada(0, 0)
 
 // Ejecutar movimientos
 coordenada.moureDreta()
