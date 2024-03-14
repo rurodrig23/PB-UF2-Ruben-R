@@ -1,8 +1,9 @@
 class coordenada() {
-
+    var x: int
+    var y: int
     constructor():
-        this.x = x
-        this.y = y
+        this.x: int = 0
+        this.y: int = 0
 
     fun moureDreta() {
         this.x += 1
