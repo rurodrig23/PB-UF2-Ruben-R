@@ -18,6 +18,32 @@ class Main
 
 }
 
+
+class Libro(val titulo: String, val autor: String) {
+
+    fun informacion() {
+        println("Título: $titulo, Autor: $autor")
+    }
+
+    fun prestar() {
+        println("Se ha prestado un ejemplar de $titulo")
+    }
+
+    fun devolver() {
+        println("Se ha devuelto un ejemplar de $titulo")
+    }
+}
+
+
+
+
+class Socio(val nombre: String, val apellido: String, val numeroSocio: Int) {
+
+    fun informacion() {
+        println()
+
+class Prestamo
+
 fun main() {
     Main()
 
