@@ -1,3 +1,5 @@
+from libro import Libro
+
 class Socio:
     def __init__(self, nombre: str, apellido: str, numero_socio: int):
         self.nombre = nombre
